@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet : E-commerce - Mohamed Jaa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f7fa; color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .back-link { display: inline-block; margin-bottom: 30px; color: #3b82f6; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        h1 { font-size: 32px; margin-bottom: 10px; }
+        .tech-badge { background: #e2e8f0; padding: 5px 12px; border-radius: 20px; display: inline-block; font-size: 14px; margin-bottom: 30px; }
+        .section { background: white; border-radius: 16px; padding: 25px; margin-bottom: 20px; border: 1px solid #e2e8f0; }
+        .section h2 { color: #3b82f6; margin-bottom: 15px; font-size: 20px; }
+        ul { list-style: none; }
+        ul li { padding: 8px 0; padding-left: 25px; position: relative; }
+        ul li::before { content: "✓"; position: absolute; left: 0; color: #10b981; }
+        .code-block { background: #1e293b; color: #e2e8f0; padding: 15px; border-radius: 12px; font-family: monospace; font-size: 13px; overflow-x: auto; }
+        .github-link { display: inline-block; background: #3b82f6; color: white; padding: 10px 25px; border-radius: 30px; text-decoration: none; margin-right: 15px; }
+        .github-link.demo { background: #10b981; }
+        .links { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour au CV</a>
+        <h1>Plateforme E-commerce de Matériel Informatique</h1>
+        <div class="tech-badge">Python (Flask) | Jinja2 | JavaScript | JSON</div>
+
+        <div class="section"><h2>📖 Contexte</h2><p>Projet académique : application web complète pour la vente d'ordinateurs avec interfaces utilisateur et administrateur.</p></div>
+
+        <div class="section"><h2>⚙️ Fonctionnalités</h2><ul><li>Authentification (hash des mots de passe)</li><li>Panier latéral dynamique (JavaScript)</li><li>Filtrage et recherche en temps réel</li><li>Interface administrateur (CRUD produits)</li><li>Persistance JSON</li></ul></div>
+
+        <div class="section"><h2>💻 Extrait de code</h2><div class="code-block">@app.route('/login', methods=['POST'])<br>def login():<br>    password = hashlib.sha256(request.form['password'].encode()).hexdigest()<br>    user = get_user_by_email(request.form['email'])<br>    if user and user['password'] == password:<br>        session['user_id'] = user['id']<br>        return jsonify({'success': True})</div></div>
+
+        <div class="links"><a href="https://github.com/Mohamed-Jaa/Dexshop-web-app" target="_blank" class="github-link"><i class="fab fa-github"></i> Code source</a><a href="https://dexshop.onrender.com" target="_blank" class="github-link demo"><i class="fas fa-globe"></i> Site en ligne</a></div>
+    </div>
+</body>
+</html>
